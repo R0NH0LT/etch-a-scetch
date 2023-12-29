@@ -1,6 +1,7 @@
 const gridContainer = document.querySelector('#gridContainer');
 const resetButton = document.querySelector('#reset-button');
-const menu = document.querySelector('#menu');
+const menuButton = document.querySelector('#menuButton');
+const toggleMenu = document.querySelector('#toggleMenu');
 
 function createGrid(size) {
     gridContainer.innerHTML = '';
@@ -37,13 +38,17 @@ gridContainer.addEventListener('mouseup', () => {
 
 let isClicked = false;
 
-menu.addEventListener('click', () => {
-    if (isClicked) {
-        menu.style.transform = 'none';
-        isClicked = false;
-    } else {
-        menu.style.transform = 'rotate(90deg)';
+menuButton.addEventListener('click', () => {
+    if (isClicked === false && toggleMenu.style.right === '-400px') {
+        menuButton.style.transform = 'rotate(90deg)';
+        toggleMenu.style.right = '0';
+        toggleMenu.style.boxShadow = '-10px 0 40px rgba(0, 0, 0, 0.5)';
         isClicked = true;
+    } else {
+        menuButton.style.transform = 'rotate(0deg)';
+        toggleMenu.style.right = '-400px';
+        toggleMenu.style.boxShadow = '0 0 0 rgba(0, 0, 0, 0.5)';
+        isClicked = false;
     }
 });
 
@@ -61,4 +66,16 @@ resetButton.addEventListener('click', () => {
 });
 
 // Initial grid creation
-createGrid(30);
+createGrid(25);
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     menuButton.addEventListener('click', function () {
+//         // Toggle the menu's visibility by changing its right position
+//         if (toggleMenu.style.right === '-400px') {
+//             toggleMenu.style.right = '0';
+//         } else {
+//             toggleMenu.style.right = '-400px';
+//         }
+//     });
+// });
+

@@ -5,6 +5,21 @@
     overflow: hidden;
 }
 
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* below is everything for the background image */
+    background-image: url(photos/kelly-sikkema-sharpie-on-white-unsplash.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #a0a5a9;
+}
+
 /* START OF THE NAV BAR */
 
 nav {
@@ -51,7 +66,7 @@ nav {
     justify-content: flex-end;
 }
 
-#menu {
+#menuButton {
     width: 50px;
     height: auto;
     object-fit: cover;
@@ -59,31 +74,38 @@ nav {
     transition: transform 0.3s ease-in-out;
 }
 
-#menu:hover {
+#menuButton:hover {
     cursor: pointer;
 }
 
 /* END OF THE NAV BAR */
 
-body {
+/* START OF THE MAIN */
+
+main {
+    border: 20px solid #333;
+    border-radius: -15px;
     width: 100%;
     height: 100vh;
+    overflow: clip;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
 
-    background-image: url(photos/kelly-sikkema-sharpie-on-white-unsplash.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+#gridContainerParent {
+    width: 775px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 #gridContainer {
     display: flex;
     flex-wrap: wrap;
-    width: 700px; /* Adjust the width as needed */
-    height: 700px; /* Adjust the height as needed */
+    width: 625px; /* Adjust the width as needed */
+    height: 625px; /* Adjust the height as needed */
 }
 
 #gridContainer:hover {
@@ -96,3 +118,50 @@ body {
     border: 0.5px solid #333;
 }
 
+/* START OF THE TOGGLED MENU */
+
+#toggleMenu {
+    border-top: 0.5px solid #000;
+    border-left: 1px solid #aaa;
+    border-radius: 15px 0 0 0;
+    width: 400px;
+    height: 100%;
+    padding: 10px;
+    background-color: #333;
+    font-family: 'Play', sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    top: 90px;
+    right: -400px;
+    transition: right 0.3s, box-shadow 0.3s;
+}
+
+/* END OF THE TOGGLED MENU */
+
+/* END OF THE MAIN */
+
+/* START OF THE FOOTER */
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+}
+
+footer p {
+    font-family: 'Silkscreen', sans-serif;
+    color: #fff;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
