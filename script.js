@@ -42,7 +42,11 @@ menuButton.addEventListener('click', () => {
     if (isClicked === false && toggleMenu.style.right === '-400px') {
         menuButton.style.transform = 'rotate(90deg)';
         toggleMenu.style.right = '0';
-        toggleMenu.style.boxShadow = '-10px 0 40px rgba(0, 0, 0, 0.5)';
+        toggleMenu.style.boxShadow = 
+        '0 0 0 rgba(0, 0, 0), ' +
+        '-10px 10px 40px rgba(0, 0, 0, 0.5), ' +
+        '0 0 10px rgba(170, 170, 170, 0.5), ' +
+        '0 0 10px rgba(170, 170, 170, 0.5)';
         isClicked = true;
     } else {
         menuButton.style.transform = 'rotate(0deg)';
