@@ -30,7 +30,7 @@
         <div id="toggleMenu">
             <div id="gridSizer">
                 <label for="gridSize">Grid Size:</label>
-                <input type="text" id="gridSizeInput" placeholder="max 100...">
+                <input type="text" id="gridSizeInput" maxlength="3" value="16" placeholder="max 100...">
             </div>
             <hr>
             <div id="pencilAndEraser">
@@ -41,20 +41,20 @@
             <div id="colorSelector">
                 <div id="redContainer" class="colorRange">
                     <label for="red">Red</label>
-                    <input type="range" id="red" min="0" max="255" value="128">
+                    <input type="range" id="red" min="0" max="255" value="200">
                 </div>
                 <div id="greenContainer" class="colorRange">
                     <label for="green">Green</label>
-                    <input type="range" id="green" min="0" max="255" value="128">
+                    <input type="range" id="green" min="0" max="255" value="200">
                 </div>
                 <div id="blueContainer" class="colorRange">
                     <label for="blue">Blue</label>
-                    <input type="range" id="blue" min="0" max="255" value="128">
+                    <input type="range" id="blue" min="0" max="255" value="200">
                 </div>
             </div>
             <hr>
-            <div id="resetContainer">
-                <button id="reset-button">Start Over</button>
+            <div id="clearGridContainer">
+                <button id="clearGridButton" value="Reset">Clear Grid</button>
             </div>
         </div>
     </main>

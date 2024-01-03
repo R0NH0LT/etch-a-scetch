@@ -109,13 +109,13 @@ main {
 }
 
 #gridContainer:hover {
-    cursor: url(photos/stylus_FILL0_wght400_GRAD0_opsz24.svg), auto;
+    cursor: url(photos/pencil.PNG), auto;
 }
 
 .square {
     width: 25px;
     height: 25px;
-    border: 0.5px solid #333;
+    border: 0.2px solid #333;
 }
 
 /* START OF THE TOGGLED MENU */
@@ -166,6 +166,7 @@ hr {
     text-align: center;
     outline: none;
     font-size: 20px;
+    background-color: #999;
 }
 
 /* below is the drawing tools field */
@@ -210,10 +211,21 @@ input[type="range"] {
     appearance: none;
     border-radius: 12.5px;
     height: 25px;
+    padding: 0 10px;
     /* outline: none;
     opacity: 0.7; */
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 25px;
+    border: 1px solid #fff;
+    border-radius: 10%;
+    background: #333;
+    cursor: pointer;
 }
 
 #red {
@@ -231,10 +243,30 @@ input[type="range"] {
 
 /* below is the reset button */
 
-#resetContainer {
+#clearGridContainer {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+#clearGridButton {
+    border: none;
+    border-radius: 10px;
+    width: 175px;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    background-color: #000;
+}
+
+#clearGridButton:hover {
+    cursor: pointer;
 }
 
 
